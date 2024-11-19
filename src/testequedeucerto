@@ -1,0 +1,23 @@
+// src/App.js
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function App() {
+  const notify = () => {
+    toast.success('Botão clicado com sucesso!', {
+      position: "top-right", // Posição correta como string
+    });
+  };
+
+  return (
+    <div>
+      <button onClick={notify}>Clique aqui</button>
+      
+      {/* Toast container onde as notificações aparecerão */}
+      <ToastContainer />
+    </div>
+  );
+}
+
+export default App;
